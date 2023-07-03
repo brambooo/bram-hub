@@ -1,14 +1,15 @@
 import { Box, Button, Flex, Grid, GridItem, Show } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
-import TradeLogForm from "./components/TradeLogForm";
 
 function App() {
   return (
     <>
       <Grid
         templateAreas={{
+          // Mobile
           base: `"nav" "main"`,
-          lg: `"nav nav" "aside main"`,
+          // Normal
+          lg: `"nav nav" "aside main"`, // wider than 1024px
         }}
         templateColumns={{
           base: "1fr",
@@ -16,28 +17,15 @@ function App() {
         }}
       >
         <GridItem area="nav">
-          {/* <NavBar onSearch={(searchText) => setGameQuery({ ...gameQuery, searchText })} /> */}
           <NavBar />
         </GridItem>
         <Show above="lg">
-          <GridItem area="aside" paddingX={5}>
-            <TradeLogForm></TradeLogForm>
-            {/* <GenreList selectedGenre={gameQuery.genre} onSelectGenre={(genre) => setGameQuery({ ...gameQuery, genre})} /> */}
+          <GridItem area="aside" paddingX={5} bg="blue">
+            Aside
           </GridItem>
         </Show>
-        <GridItem area="main">
-          <Box paddingLeft={2}>Hallo</Box>
-
-          {/* <Box paddingLeft={2}> */}
-          {/* <GameHeading gameQuery={gameQuery} />
-          <Flex marginBottom={5}>
-            <Box marginRight={5}>
-              <PlatformSelector selectedPlatform={gameQuery.platform} onSelectPlatform={(platform) => setGameQuery({ ...gameQuery, platform}) } />
-            </Box>
-            <SortSelector sortOrder={gameQuery.sortOrder} onSelectSortOrder={(sortOrder) => setGameQuery({ ...gameQuery, sortOrder })} />
-          </Flex>
-        </Box>
-        <GameGrid gameQuery={gameQuery} /> */}
+        <GridItem area="main" bg="green">
+          Main
         </GridItem>
       </Grid>
     </>
