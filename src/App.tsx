@@ -21,11 +21,11 @@ function App() {
           <NavBar />
         </GridItem>
         <Show above="lg">
-          <GridItem area="aside" paddingX={5} bg="blue">
+          <GridItem area="aside" paddingX={5}>
             Aside
           </GridItem>
         </Show>
-        <GridItem area="main" bg="green">
+        <GridItem area="main">
           <GameGrid />
         </GridItem>
       </Grid>
