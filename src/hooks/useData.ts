@@ -7,6 +7,13 @@ interface FetchResponse<T> {
     results: T[];
 }
 
+/**
+ * 
+ * @param endpoint 
+ * @param requestConfig 
+ * @param deps when empty data will be received only once. When data should be changed based on a property assign it here as deps.
+ * @returns 
+ */
 const useData = <T>(endpoint: string, requestConfig?: AxiosRequestConfig, deps?: any[]) => {
     const [data, setData] = useState<T[]>([]);
     const [error, setError] = useState("");
