@@ -10,7 +10,7 @@ interface FetchResponse<T> {
 /**
  * 
  * @param endpoint 
- * @param requestConfig 
+ * @param requestConfig can be used for queryParams.
  * @param deps when empty data will be received only once. When data should be changed based on a property assign it here as deps.
  * @returns 
  */
