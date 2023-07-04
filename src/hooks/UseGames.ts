@@ -1,5 +1,6 @@
+import { Game } from "../models/game";
 import useData from "./useData";
 
-const useGames = () => useData('/games');
+const useGames = () => useData<Game>('/games');
 
 export default useGames;
