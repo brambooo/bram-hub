@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import apiClient from "../services/api-client";
 import { CanceledError } from "axios";
+import { Game } from "../models/game";
 
 const useGames = () => {
     const [games, setGames] = useState<Game[]>([]);

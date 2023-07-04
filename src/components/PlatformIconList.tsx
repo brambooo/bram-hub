@@ -13,6 +13,8 @@ interface Props {
 }
 
 const PlatformIconList = ({ platforms }: Props) => {
+    // https://dmitripavlutin.com/typescript-index-signatures/
+    // https://basarat.gitbook.io/typescript/type-system/index-signatures
     const iconMap: { [key: string]: IconType } = {
         pc: FaWindows,
         playstation: FaPlaystation,
