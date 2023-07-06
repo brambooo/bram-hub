@@ -6,4 +6,5 @@ export interface Game {
     background_image: string;
     parent_platforms: { platform: Platform }[]; // API design smell
     metacritic: number;
+    rating_top: number;
 }
